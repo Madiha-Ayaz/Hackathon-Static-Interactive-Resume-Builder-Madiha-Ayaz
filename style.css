@@ -1,7 +1,8 @@
+   
 body {
   font-family: 'Times New Roman', Times, serif;
   padding: 0;
-  background-image: url("94a0071504a8b2faf77ae446c56df37a.gif");
+  background-image: url("New-Project-5.gif");
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
@@ -16,34 +17,30 @@ h1 {
   text-decoration-color: #538399; 
   text-decoration-style: double;
   text-decoration-thickness: 2px;
-  
 }
+
+
 form {
   background-color: rgba(255, 255, 255, 0);
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0px 4px 8px rgba(192, 42, 42, 0.1);
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6), 0px 0px 30px rgba(255, 255, 255, 0.3);
   width: 40%;
   max-width: 600px;
   margin: 0 auto;
- 
-  
 }
 
 .fieldset {
-  border: 2px solid rgb(231, 238, 238) ;
+  border: 2px solid rgb(231, 238, 238);
   margin-bottom: 10px;
   color: #f5efef;
 }
 
-
- form label  {
+form label {
   display: block;
   margin-bottom: 5px;
   color: #e2d9d9;
 }
- 
-
 
 input, textarea {
   width: 90%;
@@ -51,10 +48,9 @@ input, textarea {
   margin-bottom: 10px;
   border: 1px solid #5798a3;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.8); /* Optional: slightly opaque background for better readability */
-  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for the glow effect */
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: box-shadow 0.3s ease-in-out;
 }
-
 
 input[type="submit"] {
   background-color: #133a49;
@@ -64,10 +60,13 @@ input[type="submit"] {
   cursor: pointer;
   border-radius: 5px;
 }
+
 legend {
   color: #2192be; 
-  font-weight: bold ; 
+  font-weight: bold; 
 }
+
+/* Identity Picture Styles */
 .identity-pic {
   position: relative;
   display: inline-block;
@@ -85,6 +84,8 @@ legend {
   background-clip: content-box, border-box;
   animation: shiny-border 3s infinite;
 }
+
+
 .resume-wrapper {
   display: flex;
   justify-content: space-between;
@@ -92,48 +93,176 @@ legend {
   align-items: flex-start; 
 }
 
+
+.dynamic-heading {
+  font-size: 3rem; 
+  background: linear-gradient(45deg, #FF8F9C, #FFC3A0, #FFC3A0, #FF8F9C); 
+  -webkit-background-clip: text; 
+  color: peru ; 
+  text-align: center;
+  perspective: 1000px; 
+  transform: rotateY(10deg); 
+  transition: transform 0.3s, text-shadow 0.3s;
+  
+
+  
+      
+      
+}
+
+.dynamic-heading:hover {
+  transform: rotateY(0deg) scale(1.05); 
+ 
+ color:#e9c8c8;
+ 
+ 
+}
+
+.word {
+  display: inline-block; 
+ 
+  animation: fall 1s ease forwards; 
+}
+
+.word:nth-child(1) { 
+  animation-delay: 0s; 
+  color: #FF5733; 
+}
+.word:nth-child(2) { 
+  animation-delay: 2s; 
+  color: #33FF57; 
+}
+.word:nth-child(3) { 
+  animation-delay: 4s; 
+  color: #3357FF; 
+}
+.word:nth-child(4) { 
+  animation-delay: 6s; 
+  color: #FF33A1; 
+}
+.word:nth-child(5) { 
+  animation-delay: 8s; 
+  color: #FFBD33;
+}
+.word:nth-child(6) { 
+  animation-delay: 10s; 
+  color: #A133FF; 
+}
+
+
+
+.word:nth-child(1):hover { 
+  animation-delay: 0s; 
+  color: #4eaf9a; 
+}
+.word:nth-child(2):hover { 
+  animation-delay: 2s; 
+  color: #bee0c4; 
+}
+.word:nth-child(3):hover { 
+  animation-delay: 4s; 
+  color: #92a0dd; 
+}
+.word:nth-child(4):hover { 
+  animation-delay: 6s; 
+  color: #d88fb6; 
+}
+.word:nth-child(5):hover { 
+  animation-delay: 8s; 
+  color: #b89a5b; 
+}
+.word:nth-child(6):hover { 
+  animation-delay: 10s; 
+  color: #9162b9;
+}
+
+
+
+
+.identity-pic {
+  position: relative; 
+  display: inline-block;
+  overflow: hidden; 
+}
+
+.identity-pic img {
+  max-width: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  padding: 5px;
+  animation: border-move 5s linear infinite; 
+  position: relative; 
+}
+
+
+@keyframes border-move {
+  0% {
+    border: 5px solid red; 
+    transform: scale(1); 
+  }
+  25% {
+    border: 5px solid green; 
+    transform: scale(1.05); 
+  }
+  50% {
+    border: 5px solid blue; 
+    transform: scale(1);
+  }
+  75% {
+    border: 5px solid purple; 
+    transform: scale(1.05);
+  }
+  100% {
+    border: 5px solid red; 
+    transform: scale(1); 
+  }
+}
+
+@keyframes fall {
+  0% {
+   
+    transform: translateY(-50px); 
+  }
+  100% {
+    
+    transform: translateY(0); 
+  }
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .resume-wrapper {
-    flex-direction: column; /* Stack image and form vertically */
-    align-items: center; /* Center the items */
-    gap: 20px; /* Space between image and form */
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
   }
 
-  .identity-pic img {
-    max-width: 150px; /* Adjust size of the image for mobile */
+  .identity-pic img { 
+    max-width: 150px;
   }
 
   form {
-    width: 100%; /* Ensure the form takes the full width */
-    padding: 0 10px; /* Add padding to prevent content from touching the edges */
+    width: 100%; 
+    padding: 0 10px; 
   }
-  
+
   h1 {
-    font-size: 1.5rem; /* Adjust header size for mobile */
-    margin-bottom: 15px; /* Increase space between header and form */
+    font-size: 1.5rem; ;
+    margin-bottom: 15px;
   }
 }
 
 @media (max-width: 480px) {
   .identity-pic img {
-    max-width: 120px; /* Further reduce image size for smaller screens */
+    max-width: 120px; 
   }
 
   form input, form textarea {
-    font-size: 0.875rem; /* Reduce font size for smaller screens */
-    padding: 8px; /* Adjust padding for input fields */
+    font-size: 0.875rem; 
+    padding: 8px; 
   }
 
   input[type="submit"] {
-    padding: 8px 12px; /* Adjust padding for submit button */
+    padding: 8px 12px; 
   }
 }
-
-
-
-
-
-
-
-
-
